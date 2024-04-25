@@ -1,0 +1,80 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mchemcha <mchemcha@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/21 16:02:06 by mchemcha          #+#    #+#             */
+/*   Updated: 2024/04/25 20:30:21 by mchemcha         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "fractol.h"
+#include <stdio.h>
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < n
+		&& ((unsigned char)s1[i] != '\0' || (unsigned char)s2[i] != '\0'))
+	{
+		if ((unsigned char)s1[i] != (unsigned char)s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		i++;
+	}
+	return (0);
+}
+
+size_t	ft_strlen(const char *str)
+{
+	size_t	i;
+	size_t	s;
+
+	i = 0;
+	s = 0;
+	while (str[i])
+	{
+		s = s + 1;
+		i++;
+	}
+	return (s);
+}
+float	ft_atof(char *str)
+{
+	size_t		i;
+	float	sign;
+	float	result;
+	float a;
+	float pow;
+	
+	result = 0;
+	sign = 1;
+	i = 0;
+	a = 0;
+	while (str[i] == 32)
+		i++;
+	if (str[i] == '+' || str[i] == '-')
+	{
+		if (str[i] == '-')
+			sign *= -1;
+		i++;
+	}
+	while (str[i] >= '0' && str[i] <= '9' && str[i] != '.')
+	{
+		result = (result * 10) + str[i] - 48;
+		i++;
+	}
+	if(str[i] == '.')
+		i++;
+	pow = 1;
+	while(str[i])
+	{
+		pow /= 10;
+		a = a + (str[i] - 48) * pow;
+		i++;
+	}
+	return ((result + a) * sign);
+}
+
