@@ -6,7 +6,7 @@
 /*   By: mchemcha <mchemcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 16:02:06 by mchemcha          #+#    #+#             */
-/*   Updated: 2024/04/25 20:30:21 by mchemcha         ###   ########.fr       */
+/*   Updated: 2024/04/27 18:06:14 by mchemcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,5 +76,19 @@ float	ft_atof(char *str)
 		i++;
 	}
 	return ((result + a) * sign);
+}
+
+void	ft_putstr_fd(char *str, int fd)
+{
+	int	i;
+
+	i = 0;
+	if (fd < 0)
+		return ;
+	while (str[i])
+	{
+		write(fd, &str[i], 1);
+		i++;
+	}
 }
 

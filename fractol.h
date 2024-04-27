@@ -6,7 +6,7 @@
 /*   By: mchemcha <mchemcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 23:32:00 by mchemcha          #+#    #+#             */
-/*   Updated: 2024/04/24 21:56:21 by mchemcha         ###   ########.fr       */
+/*   Updated: 2024/04/27 18:08:20 by mchemcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,21 +50,18 @@ typedef struct	s_data {
 #define Button5       5
 
 float	ft_atof(char *str);
-int	ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t	ft_strlen(const char *str);
-void ft_fractol(t_data img);
-int	ft_error(char *str);
-void draw_fractol(t_data img);
-int ft_clore(int iter, int fr);
-void my_mlx_win(t_data *img);
-int ft_julia(t_data img, int x, int y);
-int ft_mandelbrot(t_data img, int x, int y);
-int ft_julia_mandel(t_data *img, int x, int y);
-int mouse_handler(int button, int x, int y, t_data *img);
-int key_hand(int keysym);
-// get inf
-// mmlx_win
-// draw 
-// loop 
+void	ft_fractol(t_data img);
+int		ft_error(char *str);
+void	draw_fractol(t_data img);
+int		ft_clore(int iter, int fr);
+void	my_mlx_win(t_data *img);
+int		ft_julia(t_data img, int x, int y);
+int		ft_mandelbrot(t_data img, int x, int y);
+int		ft_julia_mandel(t_data *img, int x, int y);
+int		mouse_handler(int button, int x, int y, t_data *img);
+int		key_hand(int keysym);
+void	ft_putstr_fd(char *str, int fd);
 
 #endif
