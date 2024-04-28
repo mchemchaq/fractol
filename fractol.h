@@ -6,48 +6,33 @@
 /*   By: mchemcha <mchemcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 23:32:00 by mchemcha          #+#    #+#             */
-/*   Updated: 2024/04/27 18:08:20 by mchemcha         ###   ########.fr       */
+/*   Updated: 2024/04/28 17:37:01 by mchemcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRACTOL_H
 # define FRACTOL_H
 
-#include "mlx.h"
-#include <unistd.h> 
+# include "mlx.h"
+# include <unistd.h> 
 # include <limits.h>
-#include <stdio.h>
-#include <stdlib.h>
+# include <stdio.h>
+# include <stdlib.h>
 
-typedef struct s_complex
+typedef struct s_data
 {
-    double a; 
-    double b; 
-}t_complex;
-
-typedef struct	s_data {
-    float     zoom; 
-    int     type;
-    float   z0_im;
-    float   z0_real;
-	void	*img;
-    void    *mlx_win;
-    void    *mlx;
-	char	*addr;
 	int		bits_per_pixel;
 	int		line_length;
 	int		endian;
-}				t_data;
-
-#define WIDTH 800
-#define HEIGHT 800
-#define MAX_ITERATIONS 100
-
-#define Button1       1
-#define Button2       2
-#define Button3       3
-#define Button4       4
-#define Button5       5
+	int		type;
+	float	zoom;
+	float	z0_im;
+	float	z0_real;
+	void	*img;
+	void	*mlx_win;
+	void	*mlx;
+	char	*addr;
+}	t_data;
 
 float	ft_atof(char *str);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);

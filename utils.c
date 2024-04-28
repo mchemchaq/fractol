@@ -6,12 +6,12 @@
 /*   By: mchemcha <mchemcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 16:02:06 by mchemcha          #+#    #+#             */
-/*   Updated: 2024/04/27 18:06:14 by mchemcha         ###   ########.fr       */
+/*   Updated: 2024/04/28 17:46:46 by mchemcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
-#include <stdio.h>
+
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
@@ -41,39 +41,41 @@ size_t	ft_strlen(const char *str)
 	}
 	return (s);
 }
+
+static int	ft_sign(char *str, int sign, int i)
+{
+	if (str[i] == '+' || str[i] == '-')
+	{
+		if (str[i++] == '-')
+			sign *= -1;
+	}
+	return (sign);
+}
+
 float	ft_atof(char *str)
 {
-	size_t		i;
+	size_t	i;
 	float	sign;
 	float	result;
-	float a;
-	float pow;
-	
+	float	a;
+	float	pow;
+
 	result = 0;
 	sign = 1;
 	i = 0;
 	a = 0;
-	while (str[i] == 32)
+	while (str[i++] == 32)
 		i++;
-	if (str[i] == '+' || str[i] == '-')
-	{
-		if (str[i] == '-')
-			sign *= -1;
-		i++;
-	}
+	sign = ft_sign(str, sign, i);
 	while (str[i] >= '0' && str[i] <= '9' && str[i] != '.')
-	{
-		result = (result * 10) + str[i] - 48;
-		i++;
-	}
-	if(str[i] == '.')
+		result = (result * 10) + str[i++] - 48;
+	if (str[i] == '.')
 		i++;
 	pow = 1;
-	while(str[i])
+	while (str[i])
 	{
 		pow /= 10;
-		a = a + (str[i] - 48) * pow;
-		i++;
+		a = a + (str[i++] - 48) * pow;
 	}
 	return ((result + a) * sign);
 }
@@ -91,4 +93,3 @@ void	ft_putstr_fd(char *str, int fd)
 		i++;
 	}
 }
-
