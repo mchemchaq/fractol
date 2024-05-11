@@ -6,7 +6,7 @@
 /*   By: mchemcha <mchemcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 15:58:18 by mchemcha          #+#    #+#             */
-/*   Updated: 2024/04/28 17:32:29 by mchemcha         ###   ########.fr       */
+/*   Updated: 2024/05/10 18:06:46 by mchemcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,8 @@ int	main(int ac, char **av)
 	else if (ac == 4 && ft_strlen(av[1]) == 5 \
 			&& !(ft_strncmp(av[1], "julia", 5)))
 	{
-		if (!(ft_isdigit(av[2])) || !(ft_isdigit(av[3])))
+		if (!(ft_isdigit(av[2])) \
+			|| !(ft_isdigit(av[3])))
 			return (ft_putstr_fd("Envalid argumment", 2), 1);
 		img.type = 1;
 		img.z0_real = ft_atof(av[2]);

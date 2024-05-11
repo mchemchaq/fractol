@@ -6,11 +6,11 @@
 #    By: mchemcha <mchemcha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/28 17:38:06 by mchemcha          #+#    #+#              #
-#    Updated: 2024/04/28 17:38:10 by mchemcha         ###   ########.fr        #
+#    Updated: 2024/05/10 18:04:48 by mchemcha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS  = mandelbrot_julia.c fractol.c utils.c ft_error.c draw_fractol.c finel.c
+SRCS  = mandelbrot_julia.c fractol.c utils.c ft_error.c draw_fractol.c finel.c mlx.c
 
 NAME = fractol
 

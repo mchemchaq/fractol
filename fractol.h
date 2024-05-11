@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mchemcha <mchemcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/08 23:32:00 by mchemcha          #+#    #+#             */
-/*   Updated: 2024/04/28 17:37:01 by mchemcha         ###   ########.fr       */
+/*   Created: 2024/05/10 11:29:11 by mchemcha          #+#    #+#             */
+/*   Updated: 2024/05/10 18:07:03 by mchemcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,8 @@ int		ft_julia(t_data img, int x, int y);
 int		ft_mandelbrot(t_data img, int x, int y);
 int		ft_julia_mandel(t_data *img, int x, int y);
 int		mouse_handler(int button, int x, int y, t_data *img);
-int		key_hand(int keysym);
+int		key_hand1(t_data *img);
+int		key_hand(int keysym, t_data *img);
 void	ft_putstr_fd(char *str, int fd);
 
 #endif
