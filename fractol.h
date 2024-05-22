@@ -6,7 +6,7 @@
 /*   By: mchemcha <mchemcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 11:29:11 by mchemcha          #+#    #+#             */
-/*   Updated: 2024/05/10 18:07:03 by mchemcha         ###   ########.fr       */
+/*   Updated: 2024/05/22 18:50:48 by mchemcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@
 
 typedef struct s_data
 {
+	float	ofset_x;
+	float	ofset_y;
 	int		bits_per_pixel;
 	int		line_length;
 	int		endian;

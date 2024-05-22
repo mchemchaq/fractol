@@ -6,7 +6,7 @@
 #    By: mchemcha <mchemcha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/28 17:38:06 by mchemcha          #+#    #+#              #
-#    Updated: 2024/05/10 18:04:48 by mchemcha         ###   ########.fr        #
+#    Updated: 2024/05/21 15:44:58 by mchemcha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ all : $(NAME)
 $(NAME) : $(OBJS)
 	$(CC) $(FLAGS) $(OBJS) -L /usr/local/lib -lmlx -framework OpenGL -framework AppKit -o $(NAME)
 
-%.o: %.c fractol.h
+%.o: %.c fract_ol.h
 	$(CC) $(FLAGS) -c -o $@ $<
 
 clean :

@@ -6,7 +6,7 @@
 /*   By: mchemcha <mchemcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 17:15:33 by mchemcha          #+#    #+#             */
-/*   Updated: 2024/05/10 18:04:30 by mchemcha         ###   ########.fr       */
+/*   Updated: 2024/05/22 21:35:26 by mchemcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 static void	info_img(t_data *img)
 {
 	img->zoom = 1.0;
+	img->ofset_x = 0.0;
+	img->ofset_y = 0.0;
 }
 
 int	key_hand(int keysym, t_data *img)
@@ -24,6 +26,15 @@ int	key_hand(int keysym, t_data *img)
 		mlx_clear_window(img->mlx, img->mlx_win);
 		exit(0);
 	}
+	if (keysym == 123)
+		img->ofset_x -= 0.20 * img->zoom;
+	if (keysym == 124)
+		img->ofset_x += 0.20 * img->zoom;
+	if (keysym == 126)
+		img->ofset_y -= 0.20 * img->zoom;
+	if (keysym == 125)
+		img->ofset_y += 0.20 * img->zoom;
+	draw_fractol(*img);
 	return (0);
 }
 
