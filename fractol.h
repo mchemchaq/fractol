@@ -6,7 +6,7 @@
 /*   By: mchemcha <mchemcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 11:29:11 by mchemcha          #+#    #+#             */
-/*   Updated: 2024/05/22 18:50:48 by mchemcha         ###   ########.fr       */
+/*   Updated: 2024/06/02 17:55:57 by mchemcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,27 +16,27 @@
 # include "mlx.h"
 # include <unistd.h> 
 # include <limits.h>
-# include <stdio.h>
 # include <stdlib.h>
+# include <stdio.h>
 
 typedef struct s_data
 {
-	float	ofset_x;
-	float	ofset_y;
+	double	ofset_x;
+	double	ofset_y;
 	int		bits_per_pixel;
 	int		line_length;
 	int		endian;
 	int		type;
-	float	zoom;
-	float	z0_im;
-	float	z0_real;
+	double	zoom;
+	double	z0_im;
+	double	z0_real;
 	void	*img;
 	void	*mlx_win;
 	void	*mlx;
 	char	*addr;
 }	t_data;
 
-float	ft_atof(char *str);
+double	ft_atof(char *str);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t	ft_strlen(const char *str);
 void	ft_fractol(t_data img);

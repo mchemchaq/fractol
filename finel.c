@@ -6,7 +6,7 @@
 /*   By: mchemcha <mchemcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 17:15:33 by mchemcha          #+#    #+#             */
-/*   Updated: 2024/05/22 21:35:26 by mchemcha         ###   ########.fr       */
+/*   Updated: 2024/05/23 19:22:41 by mchemcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ int	key_hand(int keysym, t_data *img)
 	if (keysym == 124)
 		img->ofset_x += 0.20 * img->zoom;
 	if (keysym == 126)
-		img->ofset_y -= 0.20 * img->zoom;
-	if (keysym == 125)
 		img->ofset_y += 0.20 * img->zoom;
+	if (keysym == 125)
+		img->ofset_y -= 0.20 * img->zoom;
 	draw_fractol(*img);
 	return (0);
 }

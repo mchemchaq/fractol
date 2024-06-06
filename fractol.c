@@ -6,21 +6,30 @@
 /*   By: mchemcha <mchemcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 15:58:18 by mchemcha          #+#    #+#             */
-/*   Updated: 2024/05/21 15:42:25 by mchemcha         ###   ########.fr       */
+/*   Updated: 2024/06/06 17:51:23 by mchemcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
+
+// void ss()
+// {
+// 	system("leaks fractol");
+// }
 int	ft_isdigit(char *c)
 {
 	int	i;
 
 	i = 0;
+	if(c[i] == '\0')
+		return(0);
 	while (c[i])
 	{
 		if (c[i] == '-' || c[i] == '+')
 			i++;
+		if (c[i] == '\0')
+			return (0);
 		while (c[i] >= '0' && c[i] <= '9')
 			i++;
 		if (c[i] == '.')
@@ -39,6 +48,7 @@ int	main(int ac, char **av)
 {
 	t_data	img;
 
+	// atexit(ss);
 	if (ac == 2 && ft_strlen(av[1]) == 10 \
 		&& !(ft_strncmp(av[1], "mandelbrot", 10)))
 	{
@@ -61,3 +71,6 @@ int	main(int ac, char **av)
 	else
 		return (ft_putstr_fd("Envalid argumment", 2), 1);
 }
+//parsing
+//./fractol julia "" ""
+//./fractol julia + + 

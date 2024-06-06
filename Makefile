@@ -6,7 +6,7 @@
 #    By: mchemcha <mchemcha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/28 17:38:06 by mchemcha          #+#    #+#              #
-#    Updated: 2024/05/21 15:44:58 by mchemcha         ###   ########.fr        #
+#    Updated: 2024/06/02 18:40:04 by mchemcha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,4 +38,4 @@ fclean : clean
 
 re : fclean all
 
-.PHONY : clean
+.PHONY : clean fclean re 

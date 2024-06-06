@@ -6,7 +6,7 @@
 /*   By: mchemcha <mchemcha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 16:02:06 by mchemcha          #+#    #+#             */
-/*   Updated: 2024/05/21 15:43:44 by mchemcha         ###   ########.fr       */
+/*   Updated: 2024/06/02 17:55:57 by mchemcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,13 +52,13 @@ static int	ft_sign(char *str, int sign, int i)
 	return (sign);
 }
 
-float	ft_atof(char *str)
+double	ft_atof(char *str)
 {
 	size_t	i;
-	float	sign;
-	float	result;
-	float	a;
-	float	pow;
+	double	sign;
+	double	result;
+	double	a;
+	double	pow;
 
 	result = 0;
 	sign = 1;
